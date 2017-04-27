@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CRUDwithWebAPIandAngular.Web", "CRUDwithWebAPIandAngular.Web\CRUDwithWebAPIandAngular.Web.csproj", "{89CBABF6-9919-49CD-B7F8-4E0D3344DABD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CRUDwithWebAPIandAngular.Domain", "CRUDwithWebAPIandAngular.Domain\CRUDwithWebAPIandAngular.Domain.csproj", "{C766DC1C-33A2-4C5F-B93B-40657F5CBCAA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{89CBABF6-9919-49CD-B7F8-4E0D3344DABD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{89CBABF6-9919-49CD-B7F8-4E0D3344DABD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{89CBABF6-9919-49CD-B7F8-4E0D3344DABD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{89CBABF6-9919-49CD-B7F8-4E0D3344DABD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C766DC1C-33A2-4C5F-B93B-40657F5CBCAA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C766DC1C-33A2-4C5F-B93B-40657F5CBCAA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C766DC1C-33A2-4C5F-B93B-40657F5CBCAA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C766DC1C-33A2-4C5F-B93B-40657F5CBCAA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

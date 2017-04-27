@@ -1,0 +1,4 @@
+c:\users\kunal.kakkad\documents\visual studio 2015\Projects\CRUDwithWebAPIandAngular\CRUDwithWebAPIandAngular.Domain\bin\Debug\CRUDwithWebAPIandAngular.Domain.dll
+c:\users\kunal.kakkad\documents\visual studio 2015\Projects\CRUDwithWebAPIandAngular\CRUDwithWebAPIandAngular.Domain\bin\Debug\CRUDwithWebAPIandAngular.Domain.pdb
+c:\users\kunal.kakkad\documents\visual studio 2015\Projects\CRUDwithWebAPIandAngular\CRUDwithWebAPIandAngular.Domain\obj\Debug\CRUDwithWebAPIandAngular.Domain.dll
+c:\users\kunal.kakkad\documents\visual studio 2015\Projects\CRUDwithWebAPIandAngular\CRUDwithWebAPIandAngular.Domain\obj\Debug\CRUDwithWebAPIandAngular.Domain.pdb
