@@ -1,11 +1,15 @@
-﻿<!DOCTYPE html>
+﻿@using System.Web.Optimization
+{
+}
+<!DOCTYPE html>
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
     <title>CRUD demo using Web API and AngularJS</title>
 </head>
-<body>
+<body ng-app="app" ng-controller="appCtrl">
     <div>
     </div>
+    @Scripts.Render("~/bundles/angular");
 </body>
 </html>
