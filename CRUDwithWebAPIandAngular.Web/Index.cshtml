@@ -7,9 +7,17 @@
     <meta name="viewport" content="width=device-width" />
     <title>CRUD demo using Web API and AngularJS</title>
 </head>
-<body ng-app="app" ng-controller="appCtrl">
+<body ng-app="app" ng-controller="appCtrl" ng-init="initApp()">
     <div>
     </div>
     @Scripts.Render("~/bundles/angular");
+    @Scripts.Render("~/bundles/jquery");
+    @Scripts.Render("~/bundles/bootstrap");
+    @Scripts.Render("~/bundles/appStart");
+    @Scripts.Render("~/bundles/appLogics");
+    @Scripts.Render("~/bundles/dataservices");
+    @Scripts.Render("~/bundles/controllers");
+
+
 </body>
 </html>

@@ -168,6 +168,7 @@
     <None Include="Scripts\lib\jquery\jquery-3.1.1.intellisense.js" />
     <Content Include="Scripts\lib\bootstrap\bootstrap.js" />
     <Content Include="Scripts\lib\bootstrap\bootstrap.min.js" />
+    <Content Include="Scripts\lib\bootstrap\tether.min.js" />
     <Content Include="Scripts\lib\jquery\jquery-3.1.1.js" />
     <Content Include="Scripts\lib\jquery\jquery-3.1.1.min.js" />
     <Content Include="Scripts\lib\jquery\jquery-3.1.1.slim.js" />

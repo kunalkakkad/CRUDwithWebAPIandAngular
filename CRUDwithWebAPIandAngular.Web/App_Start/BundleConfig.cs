@@ -13,10 +13,11 @@ namespace CRUDwithWebAPIandAngular.Web
 
             // Use the development version of Modernizr to develop with and learn from. Then, when you're
             // ready for production, use the build tool at http://modernizr.com to pick only the tests you need.
-            bundles.Add(new ScriptBundle("~/bundles/modernizr").Include(
-                        "~/Scripts/lib/modernizr/modernizr-*"));
+            //bundles.Add(new ScriptBundle("~/bundles/modernizr").Include(
+            //            "~/Scripts/lib/modernizr/modernizr-*"));
 
             bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
+                      "~/Scripts/lib/bootstrap/tether.min.js",
                       "~/Scripts/lib/bootstrap/bootstrap.min.js",
                       "~/Scripts/lib/respond/respond.js"));
 
@@ -25,20 +26,18 @@ namespace CRUDwithWebAPIandAngular.Web
                       "~/Content/css/site.css"));
 
             bundles.Add(new ScriptBundle("~/bundles/angular").Include(
-                     "~/Scripts/lib/angular/angular.min.js"));
+                     "~/Scripts/lib/angular/angular.min.js",
+                     "~/Scripts/lib/angular/angular-route.min.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/appStart").Include(
                       "~/Scripts/app/appStart/appModule.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/appLogics").Include(
-                      "~/Scripts/app/logic/appDirectives.js",
                       "~/Scripts/app/logic/serviceManager.js"));
 
-            bundles.Add(new ScriptBundle("~/bundles/controllers").Include(
-                      "~/Scripts/app/controllers/appCtrl.js"));
+            bundles.Add(new ScriptBundle("~/bundles/controllers").IncludeDirectory("~/Scripts/app/controllers", "*.js", searchSubdirectories: false));
 
-            bundles.Add(new ScriptBundle("~/bundles/dataservices").Include(
-                      "~/Scripts/app/dataservice/appDs.js"));
+            bundles.Add(new ScriptBundle("~/bundles/dataservices").IncludeDirectory("~/Scripts/app/dataservice", "*.js", searchSubdirectories: false));
 
 
         }
