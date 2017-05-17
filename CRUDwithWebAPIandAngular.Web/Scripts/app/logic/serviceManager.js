@@ -1,11 +1,30 @@
-﻿app.factory("serviceManager", ["$route", function serviceManager($route) {
+﻿app.factory("serviceManager", ["$route", "$http", function serviceManager($route, $http) {
     initializeApi = function (serviceRequests) {
         debugger;
         var returnObject = [];
         var responseData = {};
-        if (serviceRequests["get"] != undefined && Object.keys(serviceRequests["get"]).length > 0) {
+        var getRequests = serviceRequests["get"]
+        if (getRequests != undefined && Object.keys(getRequests).length > 0) {
             debugger;
-            var data = Object.keys(serviceRequests["get"]).map(key => serviceRequests["get"][key])
+            var initialMethods = Object.keys(getRequests);
+            angular.forEach(initialMethods, function (eachData) {
+                var methodName = "get" + eachData;
+                //var methodUrl = getRequests[eachData];
+                responseData[methodName] = {
+                    get: function () {
+                        var a = $http.get(getRequests[eachData]).then(
+                                function (successData) {
+                                    debugger;
+                                }
+                                , function (errorData) {
+                                    debugger;
+                                }
+                            );
+                        return a;
+                    }
+                };
+            });
+
         }
         if (serviceRequests["post"] != undefined && Object.keys(serviceRequests["post"]).length > 0) {
             debugger;
@@ -25,7 +44,8 @@
         //        //default:
 
         //}
-        return returnObject;
+        //return returnObject;
+        return responseData;
     };
 
     return {

@@ -166,6 +166,7 @@
     <Content Include="Content\css\bootstrap-grid.min.css.map" />
     <Content Include="Content\css\bootstrap-grid.css.map" />
     <None Include="Scripts\lib\jquery\jquery-3.1.1.intellisense.js" />
+    <Content Include="Scripts\app\logic\fileUploader.js" />
     <Content Include="Scripts\lib\bootstrap\bootstrap.js" />
     <Content Include="Scripts\lib\bootstrap\bootstrap.min.js" />
     <Content Include="Scripts\lib\bootstrap\tether.min.js" />

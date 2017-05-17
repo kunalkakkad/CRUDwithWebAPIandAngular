@@ -3,8 +3,8 @@ app.factory("appDs", ["serviceManager", function appDs(serviceManager) {
     var appDS = {
         get: {
             //User: 'api/users',
-            user: 'api/users/',
-            abcd: 'api/users/abcd',
+            user: 'api/values/',
+            abcd: 'api/values/abcd',
         },
         getBy: {
 
