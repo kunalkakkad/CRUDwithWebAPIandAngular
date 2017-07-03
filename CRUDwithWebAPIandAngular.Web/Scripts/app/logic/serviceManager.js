@@ -1,50 +1,66 @@
 ﻿app.factory("serviceManager", ["$route", "$http", function serviceManager($route, $http) {
     initializeApi = function (serviceRequests) {
-        debugger;
         var returnObject = [];
         var responseData = {};
-        var getRequests = serviceRequests["get"]
-        if (getRequests != undefined && Object.keys(getRequests).length > 0) {
-            debugger;
-            var initialMethods = Object.keys(getRequests);
-            angular.forEach(initialMethods, function (eachData) {
-                var methodName = "get" + eachData;
-                //var methodUrl = getRequests[eachData];
-                responseData[methodName] = {
-                    get: function () {
-                        var a = $http.get(getRequests[eachData]).then(
-                                function (successData) {
-                                    debugger;
+        var httpTypes = ["get", "getBy", "post", "put", "del"];
+        angular.forEach(httpTypes, function (eachHttpType) {
+            var requests = serviceRequests[eachHttpType];
+            if (requests != undefined && Object.keys(requests).length > 0) {
+                var initialMethods = Object.keys(requests);
+                angular.forEach(initialMethods, function (eachData) {
+                    var methodName = eachHttpType + eachData;
+                    switch (eachHttpType.toUpperCase()) {
+                        case "GET":
+                            responseData[methodName] = {
+                                get: function () {
+                                    return $http.get(requests[eachData]).then(
+                                            function (successData) {
+                                                return successData.data;
+                                            }
+                                            , function (errorData) {
+                                                return errorData.data;
+                                            }
+                                        );
                                 }
-                                , function (errorData) {
-                                    debugger;
+                            };
+                            break;
+                        case "GETBY":
+                        case "POST":
+                            responseData[methodName] = {
+                                post: function (dataToPost) {
+                                    return $http.post(requests[eachData], dataToPost).then(
+                                            function (successData) {
+                                                return successData.data;
+                                            }
+                                            , function (errorData) {
+                                                return errorData.data;
+                                            }
+                                        );
                                 }
-                            );
-                        return a;
+                            };
+                            break;
+                        case "PUT":
+                            responseData[methodName] = {
+                                put: function (dataToPut) {
+                                    return $http.put(requests[eachData], dataToPut).then(
+                                            function (successData) {
+                                                return successData.data;
+                                            }
+                                            , function (errorData) {
+                                                return errorData.data;
+                                            }
+                                        );
+                                }
+                            };
+                            break;
+                        case "DEL":
+                        default:
                     }
-                };
-            });
 
-        }
-        if (serviceRequests["post"] != undefined && Object.keys(serviceRequests["post"]).length > 0) {
-            debugger;
-        }
-        //switch (serviceRequests["post"]) {
-        //    case "GET":
-        //        responseData.get = function () {
-        //            $http.get("/api/user").then(function (result) {
-        //                returnObject = result;
-        //            });
-        //        }
 
-        //        //case "GETBY":
-        //        //case "POST":
-        //        //case "PUT":
-        //        //case "DELETE":
-        //        //default:
-
-        //}
-        //return returnObject;
+                });
+            }
+        });
         return responseData;
     };
 
